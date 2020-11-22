@@ -1,57 +1,75 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 body {
-    width: 100%;
-    margin: 0;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	width: 100%;
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	background-color: #1a1a2e;
 }
 #navbar {
-    position: fixed;
-    width: 100%;
-    height: 6%;
-    background-color: rgba(0, 0, 0, .1);
-}   
+	position: fixed;
+	width: 100%;
+	height: 6%;
+	background-color: #ffd369;
+	text-align: right;
+	padding: 3px;
+	z-index: 1;
+}
+#navbar a {
+	text-decoration: none;
+	color: #1a1a2e;
+}
 #welcome-section {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    margin: 0 auto;
-    place-items: center;
-    color: white;
-    background-color: #16213e;
+	font-family: "Inconsolata", monospace;
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	color: white;
+}
+#welcome-section h1 {
+	margin: 15% 0 0 15%;
+	font-size: 2.5rem;
 }
 #projects {
-    display: grid;
-    grid-template-columns: repeat(minmax(300px, 1fr));
-    width: clamp(300px, 50vw, 90vw);
-    border: 4px solid gray;
-    border-radius: 3px 3px 0 0;
-    height: min-content;
-    margin: 0 auto;
-    padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(minmax(300px, 1fr));
+	width: clamp(290px, 45vw, 80vw);
+	border: 4px solid#15191f;
+	border-radius: 7px 7px 0 0;
+	height: min-content;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: #222831;
+	text-align: center;
 }
 .project-tile {
-    display: block;
-    height: 90px;
-    border: 2px solid black;
-    border-radius: 15px 15px 35px 35px;
-    margin: 2px 0;
+	height: 90px;
+	border: 2px solid #52575d;
+	border-radius: 15px 15px 35px 35px;
+	margin: 2px 0;
+	position: relative;
+	background-color: #393e46;
 }
-.project-tile::after {
-    border-bottom: 1px solid black;
-    margin: 1px;
-    width: 100%;
+
+.project-link {
+	display: block;
+	width: 90%;
+	height: 90%;
+	margin: 3% 0 0 3%;
+	background: url(method-draw-image.svg) no-repeat;
+	background-size: contain;
+}
+#more-link {
+	text-decoration: none;
+	color: #52575d;
+	margin-top: 2px;
+	text-align: right;
 }
 footer {
-    height: 30vh;
-    width: 100%;
-    background-color: slategray;
-}
-@media (min-width: 700px) {
-    #projects {
-        color: green;
-    }
+	height: 30vh;
+	width: 100%;
+	background-color: #141424;
 }

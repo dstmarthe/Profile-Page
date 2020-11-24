@@ -7,20 +7,23 @@ body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-	background-color: #1a1a2e;
+	
 }
 #navbar {
 	position: fixed;
 	width: 100%;
 	height: 6%;
-	background-color: #ffd369;
+	background-color:#393e46;
 	text-align: right;
-	padding: 3px;
+	place-items: center;
 	z-index: 1;
+	padding-top: 6px;
+	font-family: monospace;
 }
 #navbar a {
 	text-decoration: none;
-	color: #1a1a2e;
+	color: white;
+	margin-right: 8%;
 }
 #welcome-section {
 	font-family: "Inconsolata", monospace;
@@ -28,10 +31,17 @@ body {
 	width: 100vw;
 	display: grid;
 	color: white;
+	background-color: black;
 }
 #welcome-section h1 {
-	margin: 15% 0 0 15%;
-	font-size: 2.5rem;
+	margin: 11% auto;
+	font-size: 2.2rem;
+}
+#skills {
+	margin: -10% auto;
+}
+.langIcon {
+
 }
 #projects {
 	display: grid;
@@ -40,7 +50,7 @@ body {
 	border: 4px solid#15191f;
 	border-radius: 7px 7px 0 0;
 	height: min-content;
-	margin: 0 auto;
+	margin: 15% auto 0;
 	padding: 10px;
 	background-color: #222831;
 	text-align: center;

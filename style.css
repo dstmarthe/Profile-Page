@@ -7,23 +7,29 @@ body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-	
+	/* background-color: #ffd369; */
+	background-color: #31326f;
+	transition: 0.25s;
 }
 #navbar {
 	position: fixed;
-	width: 100%;
-	height: 6%;
-	background-color:#393e46;
-	text-align: right;
-	place-items: center;
+	width: 30px;
+	height: 100%;
+	background-color: #98ff98;
 	z-index: 1;
-	padding-top: 6px;
+
 	font-family: monospace;
 }
+
 #navbar a {
 	text-decoration: none;
-	color: white;
-	margin-right: 8%;
+	color: black;
+	display: none;
+}
+
+#navbar:hover {
+	width: 10%;
+	transition: 0.25s;
 }
 #welcome-section {
 	font-family: "Inconsolata", monospace;
@@ -41,14 +47,14 @@ body {
 	margin: -10% auto;
 }
 .langIcon {
-
+	width: 10%;
 }
 #projects {
 	display: grid;
 	grid-template-columns: repeat(minmax(300px, 1fr));
-	width: clamp(290px, 45vw, 80vw);
+	width: clamp(390px, 40vw, 80vw);
 	border: 4px solid#15191f;
-	border-radius: 7px 7px 0 0;
+	border-radius: 9px 9px 0 0;
 	height: min-content;
 	margin: 15% auto 0;
 	padding: 10px;
@@ -81,5 +87,5 @@ body {
 footer {
 	height: 30vh;
 	width: 100%;
-	background-color: #141424;
+	background-color: black;
 }

@@ -9,27 +9,40 @@ body {
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 	/* background-color: #ffd369; */
 	background-color: #31326f;
-	transition: 0.25s;
+	
 }
 #navbar {
+	display: grid;
+	grid-template-rows: 10% 10% 50%;
 	position: fixed;
 	width: 30px;
 	height: 100%;
 	background-color: #98ff98;
 	z-index: 1;
-
 	font-family: monospace;
+	overflow: hidden;
 }
 
 #navbar a {
 	text-decoration: none;
-	color: black;
-	display: none;
+	color: #98ff98;
+	height: 5rem;
+	margin: 0 auto;
 }
 
-#navbar:hover {
+#navbar:hover
+ {
 	width: 10%;
-	transition: 0.25s;
+	transition: 0.25s ease;
+}
+#navbar:hover a {
+	color: black;
+}
+#arrows {
+	width: 2em;
+	align-self: center;
+	justify-self: center;
+	
 }
 #welcome-section {
 	font-family: "Inconsolata", monospace;

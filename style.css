@@ -91,7 +91,8 @@ body {
 	font-family: "Inconsolata", monospace;
 	height: 100vh;
 	width: 100vw;
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	color: white;
 	background-color: #0a0a23;
 }
@@ -100,7 +101,18 @@ body {
 	font-size: 2.2rem;
 }
 #skills {
-	margin: -11% auto;
+	margin: -8% 0 0 37%;
+	width: max-content;
+	font-size: 1.5rem;
+
+}
+#braces {
+	height: 100px;
+}
+#bracesleft {
+	transform: rotate(180deg);
+	height: 100px;
+	margin-left: -30px;
 }
 .langIcon {
 	width: 10%;

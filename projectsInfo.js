@@ -1,60 +1,51 @@
-'use strict';
-import styled from 'styled-components';
+"use strict";
+import styled from "styled-components";
+import React from "react";
+import ReactDOM from "react"
 
-const api= 
+const domContainer = document.getElementById("projInfo");
 
-const hoverWin = styled.div`
-display: inline-block;
-border-radius: 3px;
-padding: 0.5rem 0;
-margin: auto;
-width: 16rem;
-background-color: white;
-color: black;
-`
-function requestUserRepos(){
-    
-  // create new XMLHttpRequest object
-  const xhr = new XMLHttpRequest();
-  
-  // GitHub endpoint, dynamically passing in specified username
-  const url = `https://api.github.com/users/${username}/repos`;
-  
-  // Open a new connection, using a GET request via URL endpoint
-  // Providing 3 arguments (GET/POST, The URL, Async True/False)
-  xhr.open('GET', url, true);
-  
-  xhr.onload = function() {
-    
-    // Parse API data into JSON
-    const data = JSON.parse(this.response);
-    
-    // Log the response
-    console.log(data);
-
+function hover(element, enter, leave) {
+	element.addEventListener("mouseenter", enter);
+	element.addEventListener("mouseleave", leave);
 }
 
-// Send the request to the server
-xhr.send();
+hover(
+	document.getElementsByClassName("project-link"),
+	(e) => {
+		// On hover
+		ReactDOM.render(<projectsInfo />, domContainer);
+	},
+	(e) => {
+		// On exit hover
+		return null;
+	}
+);
 
+export default class projectsInfo extends React.Component {
+	state = {
+		loading: true,
+		person: null,
+	};
+
+	async componentDidMount() {
+		const url = "https://api.github.com/users/dstmarthe/repos";
+		const response = await fetch(url);
+		const data = response.json;
+		console.log(data.results[0]);
+		this.setState({ person: data.results[0], loading: false });
+	}
+
+	render() {
+		{<div>
+			this.state.loading || !this.state.person ? (
+				<div>loading...</div></div>
+			) : (
+				<div>
+					<h2>{this.state.person.name}</h2>
+					<p>{this.state.person.description}</p>
+				</div>
+			);
+		}
+	}
 }
-
-// Call function passing in 'dstmarthe' as GitHub username
-requestUserRepos('dstmarthe');
-
-render(
-  <div>
-  <h2>${name}</h2>
-  <p></p>
-</div>
-)
-
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
-    );
-  }
-}
-const domContainer = document.querySelector('#projInfo');
-ReactDOM.render(e(LikeButton), domContainer);

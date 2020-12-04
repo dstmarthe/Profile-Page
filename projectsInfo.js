@@ -1,8 +1,9 @@
 "use strict";
 import styled from "styled-components";
-import React from "react";
-import ReactDOM from "react"
-
+import React from "practical-react";
+import ReactDOM from "practical-react"
+var React = require('react');
+var ReactDOM = require('react-dom');
 const domContainer = document.getElementById("projInfo");
 
 function hover(element, enter, leave) {
@@ -22,7 +23,7 @@ hover(
 	}
 );
 
-export default class projectsInfo extends React.Component {
+export default class projectsInfo extends React.component {
 	state = {
 		loading: true,
 		person: null,
@@ -36,11 +37,11 @@ export default class projectsInfo extends React.Component {
 		this.setState({ person: data.results[0], loading: false });
 	}
 
-	render() {
-		{<div>
-			this.state.loading || !this.state.person ? (
+	render(){ 
+		<div>
+			(this.state.loading || !this.state.person) ?  
 				<div>loading...</div></div>
-			) : (
+			 ): (
 				<div>
 					<h2>{this.state.person.name}</h2>
 					<p>{this.state.person.description}</p>

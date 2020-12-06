@@ -1,24 +1,27 @@
 "use strict";
+import React from "react";
+import ReactDOM from "react-dom";
 var React = require("react");
 var ReactDOM = require("react-dom");
-const domContainer = document.getElementById("projInfo");
+const domContainer = document.getElementById("#projInfo");
 
-// function hover(element, enter, leave) {
-// 	element.addEventListener("mouseenter", enter);
-// 	element.addEventListener("mouseleave", leave);
-// }
+function hover(element, enter, leave) {
+	element.addEventListener("mouseenter", enter);
+	element.addEventListener("mouseleave", leave);
+}
 
-// hover(
-// 	document.querySelectorAll("project-link"),
-// 	(e) => {
-// 		// On hover
-// 		ReactDOM.render(<projectsInfo />, domContainer);
-// 	},
-// 	(e) => {
-// 		// On exit hover
-// 		return null;
-// 	}
-// );
+hover(
+	document.querySelectorAll('.project-link'),
+	(e) => {
+		// On hover
+		ReactDOM.render(<projectsInfo />, domContainer);
+		console.log("Hovering");
+	},
+	(e) => {
+		// On exit hover
+		return null;
+	}
+);
 
 export default class projectsInfo extends React.Component {
 	state = {

@@ -1,6 +1,10 @@
 "use strict";
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React from 'react';
+import ReactDOM from 'react-dom'
+import './style.css';
+import './index.html'
+// var React = require("react");
+// var ReactDOM = require("react-dom");
 const domContainer = document.getElementById("#projInfo");
 
 function hover(element, enter, leave) {
@@ -50,7 +54,7 @@ hover(
 	document.querySelectorAll(".project-link"),
 	(e) => {
 		// On hover
-		ReactDOM.render(info, domContainer);
+		ReactDOM.render(projectsInfo, domContainer);
 		console.log("Hovering");
 	},
 	(e) => {

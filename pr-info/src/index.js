@@ -8,12 +8,12 @@ import "@babel/register";
 const domContainer = document.getElementById("#projInfo");
 
 function hover(element, enter, leave) {
-  element.addEventListener("mouseenter", enter);
-  element.addEventListener("mouseleave", leave);
+  element.forEach( link => link.addEventListener("mouseenter", enter));
+  element.forEach( link => link.addEventListener("mouseleave", leave));
 }
 
 hover(
-  document.querySelectorAll(".project-link"),
+  document.querySelectorAll(".project-tile"),
   (e) => {
     // On hover
     ReactDOM.render(

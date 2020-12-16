@@ -30,11 +30,12 @@ body {
 	text-align: center;
 	color: #98ff98;
 	background-color: black;
-	height: 25%;
+	height: 15%;
 	width: 100%;
 	display: none;
-	padding-top: 2rem;
+	padding-top: auto;
 	border: 1px solid;
+	border-radius: 6px;
 	overflow: hidden;
 	border: 1px solid white;
 }
@@ -99,16 +100,16 @@ body {
 	font-size: 2.2rem;
 }
 #skills {
-	margin: -8% 0 0 37%;
+	margin: auto;
 	width: max-content;
 	font-size: 1.5rem;
 }
 #braces {
-	height: 100px;
+	height: 5rem;
 }
 #bracesleft {
 	transform: rotate(180deg);
-	height: 100px;
+	height: 5rem;
 	margin-left: -30px;
 }
 .langIcon {
@@ -121,14 +122,14 @@ body {
 }
 #projInfo {
 	width: 35vw;
-	height: 30vh;
+	height: 29vh;
 	background-color: white;
-	margin: 20% 0 0 10%;
+	margin: 25% 0 0 15%;
 }
 #projects {
 	display: grid;
 	grid-template-columns: repeat(minmax(300px, 1fr));
-	width: clamp(390px, 40vw, 80vw);
+	width: clamp(380px, 30vw, 50vw);
 	border: 4px solid#15191f;
 	border-radius: 9px 9px 0 0;
 	height: min-content;

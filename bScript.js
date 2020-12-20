@@ -1,6 +1,12 @@
+import "css-paint-polyfill";
+import "https://unpkg.com/houdini-static-gradient@1.1.2/worklet/properties.js";
 const domContainer = document.querySelector("#projInfo");
+var linkList = document.querySelectorAll(".project-tile");
 const searchQueryURL = "https://api.github.com/users/dstmarthe/repos";
 domContainer.innerHTML = "";
+CSS.paintWorklet.addModule(
+	"https://unpkg.com/houdini-static-gradient@1.1.2/worklet.js"
+);
 
 function hover(element, enter, leave) {
 	element.forEach((link) => link.addEventListener("mouseenter", enter));
@@ -15,19 +21,18 @@ async function getRepo(num) {
 			console.log(response[num].name);
 			//returm name and description of repo by index
 			domContainer.innerHTML = `Name: ${response[num].name}
-			\<br/ > Description: ${response[num].description}`
-
+			\<br/ > Description: ${response[num].description}`;
 		})
 		.catch((err) => console.log(err));
 }
 
 hover(
 	//call Hover function
-	document.querySelectorAll(".project-tile"),
+	...linkList,
 	(e) => {
 		// On hover
 		console.log("Hovering");
-		getRepo(1);
+		getRepo(node);
 	},
 	(e) => {
 		// On exit hover

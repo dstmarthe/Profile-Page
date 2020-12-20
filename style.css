@@ -11,7 +11,14 @@ body {
 	grid-template-rows: auto 1fr auto;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 	/* background-color: #ffd369; */
-	background-color: #d0e8f2;
+	/* background-color: #d0e8f2; */
+}
+
+main {
+	--static-gradient-direction: to-top;
+	--static-gradient-color: #d0e8f2;
+	--static-gradient-size: 2;
+	background-image: paint(static-gradient);
 }
 /* #navbar {
 	display: grid;
@@ -118,13 +125,30 @@ body {
 #projectSection {
 	display: grid;
 	grid-template-columns: 2fr 2fr;
-	grid-template-rows: 100%;
+	grid-template-rows: 80%;
+	padding: 0;
+}
+.infocontainer {
+	position: relative;
+	margin: 20% auto 0;
+	padding: 0;
+	width: max-content;
+}
+#computer {
+	width: 40vw;
+}
+.top-left {
+	position: absolute;
+	top: 6px;
+	left: 4px;
 }
 #projInfo {
-	width: 35vw;
-	height: 29vh;
-	background-color: white;
-	margin: 25% 0 0 15%;
+	width: 39.4vw;
+	height: 17vw;
+	color: #39ff14;
+	background-color: black;
+	margin: 0;
+	padding: 5px;
 }
 #projects {
 	display: grid;
@@ -137,6 +161,7 @@ body {
 	padding: 10px;
 	background-color: #222831;
 	text-align: center;
+	z-index: 1;
 }
 .project-tile {
 	height: 90px;
@@ -162,7 +187,7 @@ body {
 	text-align: right;
 }
 footer {
-	height: 30vh;
+	height: 10vh;
 	width: 100%;
-	background-color: black;
+	background-color: lightgray;
 }

@@ -18,15 +18,20 @@
 	</head>
 </html >
 <body class="has-navbar-fixed-top">
-	<nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
-		<div class="navbar-brand is-right">
-			
-			<a class="navbar-item" href="#projectSection">
+	<nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		  </a>
+		</div>
+			<a class="navbar-item has-text-white" href="#projectSection">
 				Projects
 			  </a>
 			</div>
-			  <div class="navbar-item has-dropdown">
-				<a class="navbar-link">
+			  <div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link has-text-white">
 				  Social
 				</a>
 			  
@@ -40,24 +45,20 @@
 					  <a class="navbar-item">
 						Github
 					  </a>
-				
+				</div>
 			  </div>
 			
-		  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-			<span aria-hidden="true"></span>
-			<span aria-hidden="true"></span>
-			<span aria-hidden="true"></span>
-		  </a>
+		  
 		</div>
 	  </nav>
 	<main>
-		<section class="hero is-fullheight is-black">
+		<section class="hero is-medium has-navbar-fixed-top">
 			<div class="hero-body">
 			  <div class="container has-text-centered">
-				<h1 class="title">
+				<h1 class="title has-text-white">
 				  Hi, I'm Dale
 				</h1>
-				<h2 class="subtitle">
+				<h2 class="subtitle has-text-white">
 				  Front End Web Developer
 				</h2>
 				
@@ -76,7 +77,7 @@
 			</div>
 		  </section>
 	
-		<section id="projectSection">
+		<section id="projectSection" class="section">
 			<div class="infocontainer">
 				<img src="pixels.png" alt="pixel art of computer monitor" id="computer">
 				<div id="projInfo" class="top-left"></div>
@@ -98,7 +99,13 @@
 			</div>
 		</section>
 	</main>
-	<footer id="footer"></footer>
+	<footer class="footer">
+		<div class="content has-text-centered">
+		  <p>
+			There will be things here.
+		  </p>
+		</div>
+	  </footer>
 	<script src="https://unpkg.com/css-paint-polyfill"></script>
 	<script src="bScript.js" type="text/javascript"></script>
 </body>

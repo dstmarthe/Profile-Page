@@ -3,6 +3,7 @@ var linkList = document.querySelectorAll(".project-tile");
 const searchQueryURL = "https://api.github.com/users/dstmarthe/repos";
 domContainer.innerHTML = "";
 CSS.paintWorklet.addModule("houdini-static-gradient/worklet.js");
+CSS.paintWorklet.addModule("bytemare/bytemare.js");
 
 function hover(element, enter, leave) {
 	element.forEach((link) => link.addEventListener("mouseenter", enter));

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bytemare": "^0.1.0",
     "houdini-static-gradient": "^1.1.2"
   }
 }

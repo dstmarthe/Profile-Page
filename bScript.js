@@ -1,12 +1,8 @@
-import "css-paint-polyfill";
-import "https://unpkg.com/houdini-static-gradient@1.1.2/worklet/properties.js";
 const domContainer = document.querySelector("#projInfo");
 var linkList = document.querySelectorAll(".project-tile");
 const searchQueryURL = "https://api.github.com/users/dstmarthe/repos";
 domContainer.innerHTML = "";
-CSS.paintWorklet.addModule(
-	"https://unpkg.com/houdini-static-gradient@1.1.2/worklet.js"
-);
+CSS.paintWorklet.addModule("houdini-static-gradient/worklet.js");
 
 function hover(element, enter, leave) {
 	element.forEach((link) => link.addEventListener("mouseenter", enter));

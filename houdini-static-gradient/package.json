@@ -1,0 +1,11 @@
+{
+  "name": "houdini-static-gradient",
+  "version": "1.1.2",
+  "description": "",
+  "main": "worklet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Argyle",
+  "license": "Apache-2.0"
+}

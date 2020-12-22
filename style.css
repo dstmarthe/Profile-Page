@@ -16,9 +16,9 @@ body {
 
 main {
 	--static-gradient-direction: to-top;
-	--static-gradient-color: #d0e8f2;
-	--static-gradient-size: 2;
-	background-image: paint(static-gradient);
+	--static-gradient-color: #a7c5eb;
+	--static-gradient-size: 8;
+	background: paint(static-gradient), #949cdf;
 }
 /* #navbar {
 	display: grid;

@@ -15,15 +15,14 @@ body {
 }
 
 main {
-	--static-gradient-direction: to-top;
+	--static-gradient-direction: to-top;   
 	--static-gradient-color: #a7c5eb;
 	--static-gradient-size: 8;
-	/* background: paint(bytemare), #949cdf; */
+	/* background: paint(static-gradient), #949cdf; */
 	--bytemare-tile-size: 20;
 	--bytemare-gap: 1;
 	--bytemare-color: #949cdf;
 	--bytemare-probability: 0.3;
-
 	background: paint(bytemare);
 }
 /* #navbar {
@@ -53,7 +52,7 @@ main {
 	border: 1px solid white;
 }
 #nav-links:hover .link:hover {
-	color: black;
+	color: silver;
 	background-color: white;
 	border: 2px solid black;
 }
@@ -99,26 +98,13 @@ main {
     opacity: 1;
 } */
 
-#welcome-section {
-	font-family: "Inconsolata", monospace;
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	color: white;
-	background-color: #0a0a23;
-}
-#welcome-section h1 {
-	margin: 11% auto;
-	font-size: 2.2rem;
-}
 #skills {
 	margin: auto;
 	width: max-content;
 	font-size: 1.5rem;
 }
 #skills img {
-	margin: 0 0 0 -4px;
+	margin: 0 0 0 -3px;
 }
 #braces {
 	height: 5rem;
@@ -126,16 +112,19 @@ main {
 #bracesleft {
 	transform: rotate(180deg);
 	height: 5rem;
-	margin-left: -32px;
+	margin-left: -35px;
 }
 .langIcon {
 	width: 10%;
 }
+
+@media screen and (min-width: 992px) {
 #projectSection {
 	display: grid;
 	grid-template-columns: 2fr 2fr;
 	grid-template-rows: 80%;
 	padding: 0;
+}
 }
 .infocontainer {
 	position: relative;
@@ -158,6 +147,7 @@ main {
 	background-color: black;
 	margin: 0;
 	padding: 5px;
+	line-height: 1.4rem;
 }
 #projects {
 	display: grid;
